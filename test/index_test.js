@@ -12,6 +12,8 @@ describe('function',()=>{
     })
 })
 
+// assert.deepEqual(); -this compares values of two objects
+// Use chai assertion library
 // describe('hooks', function() {
 //     before(function() {
 //       // runs once before the first test in this block
