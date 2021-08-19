@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "mocha": "^9.0.3"
+  },
+  "dependencies": {
+    "redux": "^4.1.1"
   }
 }
