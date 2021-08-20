@@ -105,3 +105,11 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
+// Redux middleware boilerplate
+import { createStore, applyMiddleware } from 'redux';
+const logger = storeAPI => next => action => {
+  // do stuff here
+ 
+  return next(action);
+};
