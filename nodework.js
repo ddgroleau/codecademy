@@ -2,6 +2,8 @@ let events = require('events');
 const readline = require('readline');
 const fs = require('fs');
 const http = require('http');
+const express = require('express');
+const net = require('net');
 
 console.log(process.memoryUsage());
 
@@ -58,21 +60,22 @@ const readData = (err, data) => {
   // Write to file
   const writer = fs.createWriteStream('./text.txt');
   
-  writer.write('I wrote line 1 with node!');
-  writer.write('I wrote line 2 with node!');
-  writer.write('I wrote line 3 with node!');
+  writer.write('I wrote line 1 with node!\n');
+  writer.write('I wrote line 2 with node!\n');
+  writer.write('I wrote line 3 with node!\n');
   writer.end();
   fs.readFile("./text.txt",'utf8', readData);
 
-  //create a server
+  //create a server without express
   const PORT = 3000;
 
   let requestListener = (request, response) => {
     response.writeHead(200, {'Content-Type': 'text/plain' });
-    response.write(`Hello World! Server listening on ${PORT}\n`);
     response.end();
   };
   
   const server = http.createServer(requestListener);
   
-  server.listen(PORT);
+  server.listen(PORT, ()=> {
+    console.log(`Server listening on ${PORT}\n`)
+  });

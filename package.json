@@ -12,6 +12,8 @@
     "mocha": "^9.0.3"
   },
   "dependencies": {
+    "express": "^4.17.1",
+    "net": "^1.0.2",
     "nodemon": "^2.0.12",
     "redux": "^4.1.1"
   }
