@@ -1,5 +1,5 @@
 import { Type } from "typescript";
-
+// Just messing around with typescript
 console.log('Hello!');
 type TypeyFunction = (arg1:string) => string;
 
@@ -30,3 +30,5 @@ console.log(tuple);
 type MyType = [Typey, number];
 let TypeyArray:MyType = [typey,1];
 console.log(TypeyArray);
+
+let arrayOfTypes:(string|number)[] = [1,'1'];

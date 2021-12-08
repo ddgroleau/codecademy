@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+// Just messing around with typescript
 console.log('Hello!');
 class Typey {
     constructor() {
@@ -19,3 +20,4 @@ let tuple = [true, false];
 console.log(tuple);
 let TypeyArray = [typey, 1];
 console.log(TypeyArray);
+let arrayOfTypes = [1, '1'];
